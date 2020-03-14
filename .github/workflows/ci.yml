@@ -3,12 +3,14 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build:  
+  build:
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - run: npm install
     - run: npm run lint
     - run: npm run test
     - run: npm run build
+    - run: npm run publish
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

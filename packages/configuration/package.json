@@ -1,5 +1,6 @@
 {
   "name": "@ngsantha/configuration",
+  "description": "Env agnostic configuration for Angular",
   "version": "0.0.1",
   "scripts": {
     "build": "ng build configuration --prod",
@@ -12,5 +13,21 @@
   },
   "dependencies": {
     "dot-prop": "^5.2.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngsantha/ngsantha.git"
+  },
+  "keywords": [
+    "Angular",
+    "Environment",
+    "Config",
+    "Configuration",
+    "Agnostic"
+  ],
+  "author": "Jan Susicky <susicky.jan@gmail.com>",
+  "license": "MIT"
 }
