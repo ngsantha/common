@@ -5,7 +5,9 @@
     "postinstall": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "lint": "lerna run lint",
-    "test": "lerna run test -- -- --no-watch"
+    "test": "lerna run test -- -- --no-watch",
+    "version": "lerna version --force-publish --no-push",
+    "publish": "lerna publish from-git --yes --contents dist"
   },
   "private": true,
   "dependencies": {
