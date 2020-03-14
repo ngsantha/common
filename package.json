@@ -2,12 +2,10 @@
   "name": "ngsantha",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "postinstall": "lerna bootstrap --hoist",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "test": "lerna run test -- -- --no-watch"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +23,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.6",
+    "@angular-devkit/build-ng-packagr": "~0.900.6",
     "@angular/cli": "~9.0.6",
     "@angular/compiler-cli": "~9.0.6",
     "@angular/language-service": "~9.0.6",
@@ -40,6 +39,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "lerna": "^3.20.2",
+    "ng-packagr": "^9.0.0",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

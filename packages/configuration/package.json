@@ -1,0 +1,16 @@
+{
+  "name": "@ngsantha/configuration",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng build configuration --prod",
+    "lint": "ng lint configuration",
+    "test": "ng test configuration"
+  },
+  "peerDependencies": {
+    "@angular/core": "^8.2.14",
+    "tslib": "^1.10.0"
+  },
+  "dependencies": {
+    "dot-prop": "^5.2.0"
+  }
+}
