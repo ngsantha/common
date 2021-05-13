@@ -8,8 +8,8 @@
     "test": "ng test configuration"
   },
   "peerDependencies": {
-    "@angular/core": "^8.2.14",
-    "tslib": "^1.10.0"
+    "@angular/core": "*",
+    "tslib": "*"
   },
   "dependencies": {
     "dot-prop": "^5.2.0"
