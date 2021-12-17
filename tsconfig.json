@@ -19,6 +19,10 @@
       "configuration": [
         "dist/configuration/configuration",
         "dist/configuration"
+      ],
+      "strongly-typed-forms": [
+        "dist/strongly-typed-forms/strongly-typed-forms",
+        "dist/strongly-typed-forms"
       ]
     }
   },

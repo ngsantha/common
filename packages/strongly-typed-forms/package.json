@@ -1,0 +1,29 @@
+{
+  "name": "@ngsantha/strongly-typed-forms",
+  "description": "Strongly Typed Angular Forms",
+  "version": "1.0.1",
+  "scripts": {
+    "build": "node build"
+  },
+  "module": "forms.js",
+  "typings": "forms.d.ts",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@angular/forms": "^13.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngsantha/ngsantha.git"
+  },
+  "keywords": [
+    "Angular",
+    "Forms",
+    "Typed",
+    "Strongly"
+  ],
+  "author": "Jan Susicky <susicky.jan@gmail.com>",
+  "license": "MIT"
+}
