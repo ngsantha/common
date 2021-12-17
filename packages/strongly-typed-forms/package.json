@@ -3,7 +3,8 @@
   "description": "Strongly Typed Angular Forms",
   "version": "1.0.1",
   "scripts": {
-    "build": "node build"
+    "build": "node build",
+    "test": "echo"
   },
   "module": "forms.js",
   "typings": "forms.d.ts",
