@@ -3,7 +3,7 @@
   "description": "Env agnostic configuration for Angular",
   "version": "1.0.1",
   "scripts": {
-    "build": "ng build configuration --prod",
+    "build": "ng build configuration --configuration production",
     "test": "ng test configuration"
   },
   "peerDependencies": {
