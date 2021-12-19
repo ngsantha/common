@@ -20,6 +20,7 @@ import { SimpleChanges } from '@angular/core';
 import { StaticProvider } from '@angular/core';
 import { Type } from '@angular/core';
 import { Version } from '@angular/core';
+import { ValidatorFn as NgValidatorFn, AsyncValidatorFn as NgAsyncValidatorFn } from '@angular/forms';
 
 /**
  * This is the base class for `FormControl`, `FormGroup`, and `FormArray`.
@@ -927,9 +928,9 @@ export declare interface AsyncValidator extends Validator {
  *
  * @publicApi
  */
-export declare interface AsyncValidatorFn<T> {
-  (control: AbstractControl<T>): Promise<ValidationErrors | null> | Observable<ValidationErrors | null>;
-}
+// export declare interface AsyncValidatorFn<T> {
+//   (control: AbstractControl<T>): Promise<ValidationErrors | null> | Observable<ValidationErrors | null>;
+// }
 
 /**
  * Base class for all ControlValueAccessor classes defined in Forms package.
@@ -4281,9 +4282,9 @@ export declare interface Validator {
  *
  * @publicApi
  */
-export declare interface ValidatorFn<T> {
-  (control: AbstractControl<T>): ValidationErrors | null;
-}
+// export declare interface ValidatorFn<T> {
+//   (control: AbstractControl<T>): ValidationErrors | null;
+// }
 
 /**
  * @description
@@ -4643,3 +4644,14 @@ type StateAndValidators<T> = [FormState<T>] |
 
 type ControlConfig<T> = FormState<T> | StateAndValidators<T> | AbstractControl<T>;
 type ControlsConfig<T> = { [P in keyof T]: ControlConfig<T[P]> };
+
+export type ValidatorFn<T> = NgValidatorFn | TypedValidatorFn<T>
+export type AsyncValidatorFn<T> = NgAsyncValidatorFn | TypedAsyncValidatorFn<T>
+
+export interface TypedValidatorFn<T> {
+  (c: AbstractControl<T>): ValidationErrors | null;
+}
+
+export interface TypedAsyncValidatorFn<T> {
+  (c: AbstractControl<T>): Promise<ValidationErrors | null> | Observable<ValidationErrors | null>;
+}
