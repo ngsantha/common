@@ -4636,14 +4636,14 @@ export declare class ɵNgSelectMultipleOption implements OnDestroy {
 
 export { }
 
-type Controls<T> = { [P in keyof T]: AbstractControl<T[P]> };
-type FormState<T> = T | { value: T, disabled: boolean };
-type StateAndValidators<T> = [FormState<T>] |
+export type Controls<T> = { [P in keyof T]: AbstractControl<T[P]> };
+export type FormState<T> = T | { value: T, disabled: boolean };
+export type StateAndValidators<T> = [FormState<T>] |
   [FormState<T>, ValidatorFn<T> | ValidatorFn<T>[]] |
   [FormState<T>, ValidatorFn<T> | ValidatorFn<T>[] | null, AsyncValidatorFn<T> | AsyncValidatorFn<T>[] | null]
 
-type ControlConfig<T> = FormState<T> | StateAndValidators<T> | AbstractControl<T>;
-type ControlsConfig<T> = { [P in keyof T]: ControlConfig<T[P]> };
+export type ControlConfig<T> = FormState<T> | StateAndValidators<T> | AbstractControl<T>;
+export type ControlsConfig<T> = { [P in keyof T]: ControlConfig<T[P]> };
 
 export type ValidatorFn<T> = NgValidatorFn | TypedValidatorFn<T>
 export type AsyncValidatorFn<T> = NgAsyncValidatorFn | TypedAsyncValidatorFn<T>
