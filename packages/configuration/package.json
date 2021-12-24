@@ -1,15 +1,13 @@
 {
   "name": "@ngsantha/configuration",
   "description": "Env agnostic configuration for Angular",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "scripts": {
     "build": "ng build configuration --configuration production",
     "test": "ng test configuration"
   },
   "peerDependencies": {
     "@angular/core": "*"
-  },
-  "dependencies": {
   },
   "publishConfig": {
     "access": "public"

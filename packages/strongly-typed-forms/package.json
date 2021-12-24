@@ -1,7 +1,7 @@
 {
   "name": "@ngsantha/strongly-typed-forms",
   "description": "Strongly Typed Angular Forms",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "scripts": {
     "build": "node build",
     "test": "echo"
