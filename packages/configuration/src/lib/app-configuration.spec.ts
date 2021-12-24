@@ -24,6 +24,16 @@ describe('AppConfiguration', () => {
       expect(configuration.get('foo.bar')).toBe('baz');
     });
 
+    it('should return value from provided key path with arbitrary nesting', () => {
+      config.foo = {
+        bar: {
+          baz: 123
+        }
+      };
+
+      expect(configuration.get('foo.bar.baz')).toBe(123);
+    });
+
     it('should return default value when provided path is not defined', () => {
       expect(configuration.get('foo.bar', 'fallback')).toBe('fallback');
     });

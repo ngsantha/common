@@ -10,8 +10,6 @@
     "@angular/core": "*"
   },
   "dependencies": {
-    "dot-prop": "^5.2.0",
-    "tslib": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"

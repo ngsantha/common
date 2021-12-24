@@ -1,6 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
 import { CONFIG_SOURCE } from './tokens';
-import * as dotProp from 'dot-prop';
 
 @Injectable({ providedIn: 'root' })
 export class AppConfiguration {
@@ -23,6 +22,17 @@ export class AppConfiguration {
    * get<string>('some.undefined.path', 'fallbackValue') // 'fallbackValue'
    */
   get<T>(key: string, fallback?: T): T {
-    return dotProp.get(this.config, key, fallback);
+    const path = key.split('.');
+    let target = this.config;
+
+    for (const key of path) {
+      target = target[key];
+
+      if (target == null) {
+        break;
+      }
+    }
+
+    return target ?? fallback;
   }
 }
